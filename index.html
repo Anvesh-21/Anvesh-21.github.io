@@ -7,11 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f9f9f9;
-      --text: #333;
-      --accent: #2563eb;
-      --card: #fff;
+  --bg: #f9f9f9;
+  --text: #1f2937;
+  --accent: #dbeafe; 
+  --card: #ffffff;
     }
+    
     [data-theme="dark"] {
       --bg: #1a202c;
       --text: #f1f1f1;
@@ -27,7 +28,7 @@
     }
     header {
       background-color: var(--accent);
-      color: white;
+      color: var(--text);
       padding: 40px 20px;
       text-align: center;
       position: relative;
@@ -90,23 +91,40 @@
       margin-top: 10px;
       display: inline-block;
     }
+    
+    .contact-icons i {
+  margin-right: 6px;
+  color: var(--text);
+}
   </style>
 </head>
 <body data-theme="light">
 
   <header>
-    <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
-    <h1>Anvesh Durgam</h1>
-    <p>Full Stack Java Developer</p>
-    <p>
-      <a href="mailto:nanianvesh6127@gmail.com">nanianvesh6127@gmail.com</a> | +91 9182049590
-    </p>
-    <p>
-      <a href="https://github.com/Anvesh-21" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/anvesh-durgam-1479a4196" target="_blank">LinkedIn</a>
-    </p>
-    <a href="Anvesh_RESUME.pdf" download class="btn resume-btn">Download Resume</a>
-  </header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+  <h1>Anvesh Durgam</h1>
+  <p>Full Stack Java Developer</p>
+    
+  <p class="contact-icons">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:nanianvesh6127@gmail.com">nanianvesh6127@gmail.com</a>
+    |
+    <i class="fas fa-phone"></i>
+    <a href="tel:+919182049590">+91 9182049590</a>
+  </p>
+
+  <p class="contact-icons">
+    <i class="fab fa-github"></i>
+    <a href="https://github.com/Anvesh-21" target="_blank">GitHub</a>
+    |
+    <i class="fab fa-linkedin"></i>
+    <a href="https://www.linkedin.com/in/anvesh-durgam-1479a4196" target="_blank">LinkedIn</a>
+  </p>
+
+  <a href="Anvesh_RESUME.pdf" download class="btn resume-btn">Download Resume</a>
+</header>
+
 
   <section>
     <h2>Summary</h2>
