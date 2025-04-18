@@ -6,22 +6,51 @@
   <title>Anvesh Durgam | Java Full Stack Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #333;
+      --accent: #2563eb;
+      --card: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #1a202c;
+      --text: #f1f1f1;
+      --accent: #3b82f6;
+      --card: #2d3748;
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
     }
     header {
-      background-color: #1e293b;
+      background-color: var(--accent);
       color: white;
       padding: 40px 20px;
       text-align: center;
+      position: relative;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: var(--accent);
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
     }
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
+      background-color: var(--card);
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     h1, h2 {
       margin-bottom: 10px;
@@ -30,8 +59,8 @@
       list-style-type: square;
       padding-left: 20px;
     }
-    .contact a {
-      color: #2563eb;
+    a {
+      color: var(--accent);
       text-decoration: none;
     }
     .projects li {
@@ -40,77 +69,78 @@
     footer {
       text-align: center;
       padding: 20px;
-      background: #e2e8f0;
-      color: #444;
+      background: var(--card);
+      color: var(--text);
+      margin-top: 40px;
     }
     .btn {
-      background-color: #2563eb;
-      color: white;
+      background-color: white;
+      color: var(--accent);
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 6px;
+      border: 2px solid var(--accent);
+      transition: all 0.3s;
     }
     .btn:hover {
-      background-color: #1d4ed8;
+      background-color: var(--accent);
+      color: white;
+    }
+    .resume-btn {
+      margin-top: 10px;
+      display: inline-block;
     }
   </style>
 </head>
-<body>
+<body data-theme="light">
 
   <header>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
     <h1>Anvesh Durgam</h1>
     <p>Full Stack Java Developer</p>
-    <p>Email: <a href="mailto:nanianvesh6127@gmail.com">nanianvesh6127@gmail.com</a> | Phone: +91 9182049590</p>
+    <p>
+      <a href="mailto:nanianvesh6127@gmail.com">nanianvesh6127@gmail.com</a> | +91 9182049590
+    </p>
     <p>
       <a href="https://github.com/Anvesh-21" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/anvesh-durgam-1479a4196" target="_blank">LinkedIn</a>
     </p>
+    <a href="Anvesh_RESUME.pdf" download class="btn resume-btn">Download Resume</a>
   </header>
-    <section>
+
+  <section>
     <h2>Summary</h2>
-    <p>Proficient Full Stack Java Developer with hands-on experience in Spring Boot, ReactJS, and Microservices. Skilled in both front-end and back-end development, database operations, and secure API communication. Strong understanding of Java 8/11, RESTful APIs, and SDLC. Excellent problem-solving abilities and a passion for building scalable, secure applications and staying updated with emerging technologies.</p>
+    <p>Proficient Full Stack Java Developer with hands-on experience in Spring Boot, ReactJS, and Microservices. Skilled in front-end and back-end development, secure API communication, and database operations. Strong grasp of Java 8/11, RESTful APIs, and the entire SDLC. Passionate about building secure, scalable applications and exploring emerging technologies.</p>
   </section>
-<section>
+
+  <section>
     <h2>Technical Skills</h2>
     <ul>
-      <li><strong>Programming Languages:</strong> Java (8/11), J2EE, PHP, Python C, C++</li><br>
-	  
-      <li><strong>Java Frameworks:</strong> Spring Boot, Spring Core, Spring MVC, Spring Security, Spring Data (JDBC, JPA), Spring Cloud, Hibernate, Microservices</li>
-	  
-	  <li><strong>Scripting Languages:</strong> JavaScript, jQuery, AJAX, Shell Script</li>
-	  
-      <li><strong>Web Technologies:</strong> JSP, Servlets, HTML, CSS, XML, ReactJS, TypeScript, Bootstrap</li>
-	  
-      <li><strong>Databases:</strong> Oracle, SQL Server, MySQL, SQL Plus</li>
-	  
-      <li><strong>Application Servers:</strong> WebSphere, WebLogic, Tomcat, JBoss</li>
-	  
-      <li><strong>Build Tools:</strong> Maven, Gradle, Git, Bitbucket, Postman</li>
-	  
-      <li><strong>Environments:</strong> Windows Server 2012/2008/2003, Windows 7 & XP/2000, UNIX, LINUX</li>
-	  
-      <li><strong>Cybersecurity:</strong> Ethical Hacking, Digital Forensics</li>
-	  
-      <li><strong>Soft Skills:</strong> Problem-Solving, Communication skills, Teamwork, Time Management, Leadership</li>
+      <li><strong>Programming:</strong> Java (8/11), Python, PHP, C, C++</li>
+      <li><strong>Java Frameworks:</strong> Spring Boot, Spring MVC, Spring Security, Hibernate</li>
+      <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, ReactJS, JSP, Servlets</li>
+      <li><strong>Tools:</strong> Maven, Gradle, Git, Postman</li>
+      <li><strong>Databases:</strong> MySQL, Oracle, SQL Plus, SQL Server</li>
+      <li><strong>Other:</strong> Microservices, WebSphere, JBoss, Shell Script, Linux, Ethical Hacking</li>
     </ul>
   </section>
-  <section>
+
+  <section class="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Cryptocurrency Price Prediction and Analysis using AI:</strong> Built predictive models using Python, TensorFlow, and Flask for real-time crypto forecasting and analytics.</li>
-	  
-      <li><strong>Membership Inference Attack & Defense in Wireless Signal Classifiers:</strong> Developed secure DL models with adversarial training and differential privacy techniques.</li>
-	  
-      <li><strong>Employee Management System:</strong> Created a Spring Boot + ReactJS app with CRUD operations, role-based access, and email integration.</li>
-	  
-      <li><strong>Online Electronic Store:</strong> Built a servlet-based e-commerce site with JSP, MySQL, and session-based user authentication.</li>
+      <li><strong>Cryptocurrency Price Prediction:</strong> Python, TensorFlow, Flask — Real-time forecasting dashboard with AI models.</li>
+      <li><strong>Membership Inference Attack Defense:</strong> Deep Learning security project using adversarial techniques.</li>
+      <li><strong>Employee Management System:</strong> Java, Spring Boot, ReactJS — Full CRUD + email system + RBAC.</li>
+      <li><strong>Online Electronic Store:</strong> JSP, Servlets, MySQL — Session-based multi-category ecommerce platform.</li>
     </ul>
   </section>
+
   <section>
     <h2>Education</h2>
     <p>B.Tech in Computer Science & Engineering – Anurag College of Engineering, Hyderabad</p>
   </section>
-	 <section class="contact">
+
+  <section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:nanianvesh6127@gmail.com">nanianvesh6127@gmail.com</a></p>
     <p>Phone: +91 9182049590</p>
@@ -121,6 +151,14 @@
   <footer>
     <p>&copy; 2025 Anvesh Durgam. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    }
+  </script>
 
 </body>
 </html>
